@@ -1,0 +1,11 @@
+{{ printf "<!-- SC START gallery -->"  | safeHTML }}
+<div class="article-gallery">
+    <div class="article-gallery-photos">
+        {{ range .Params }}
+        <a class="article-gallery-img fancybox" href="{{ . }}" rel="group1">
+            <img src="{{ . | absURL }}" itemprop="image">
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ printf "<!-- SC END gallery -->"  | safeHTML }}

@@ -1,0 +1,18 @@
+{{ printf "<!-- START about -->"  | safeHTML }}
+{{ partial "head" . }}
+{{ partial "header" . }}
+<div class="content">
+
+
+<main id="main">
+{{ .Content }}
+</main>
+{{ partial "aside" . }}
+
+
+
+</div>
+
+{{ partial "footer" . }}
+{{ partial "end_body_end_html" . }}
+{{ printf "<!-- END about -->"  | safeHTML }}

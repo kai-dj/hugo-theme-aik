@@ -1,0 +1,16 @@
+{{ printf "<!-- P START pagination -->"  | safeHTML }}
+<div id="page-nav" style="font-size:1.6em;padding-bottom:1.6em;">
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    {{ if .Paginator.HasPrev }}
+        <a style="float:left;" class="extend prev" rel="prev" href="{{.Paginator.Prev.URL}}">
+            « previous page<!--  {{with .Site.Data.l10n.pagination.previous}}{{.}}{{end}} -->
+        </a>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+        <a style="float:right;" class="extend next" rel="next" href="{{.Paginator.Next.URL}}">
+          next page »<!-- {{with .Site.Data.l10n.pagination.next}}{{.}}{{end}} -->
+        </a>
+    {{ end }}
+{{ end }}
+</div>
+{{ printf "<!-- P END pagination -->"  | safeHTML }}

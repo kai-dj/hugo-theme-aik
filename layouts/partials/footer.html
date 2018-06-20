@@ -1,0 +1,12 @@
+{{ printf "<!-- P START footer -->"  | safeHTML }}
+<footer id="footer">
+      &copy; {{now.Format "2006"}}
+      <i id="logo-small">
+        <img height="15" id="kai-logo-small" alt="logo-small" src="{{ .Site.BaseURL }}logo-small.svg">
+      </i>
+      <a href="{{ .Site.BaseURL }}">kai</a>. 
+      <a href="{{ .Site.BaseURL }}imprint">imprint</a>. 
+      <br>
+      {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
+</footer>
+{{ printf "<!-- P END footer -->"  | safeHTML }}

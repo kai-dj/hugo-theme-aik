@@ -1,0 +1,22 @@
+{{ printf "<!-- W START recent_articles -->"  | safeHTML }}
+<div class="widget-wrap">
+  <h3 class="widget-title">
+    latest posts
+    <!--{{with .Site.Data.l10n.widgets.recent_articles.title}}{{.}}{{end}} -->
+  </h3>
+  <div class="widget">
+    <ul id="recent-post">
+
+      {{ range first 10 (where .Site.Pages "Type" "post") }}
+      {{ if and (isset .Params "title") (not (eq .Params.title "")) }}
+
+      <li>
+        <a href="{{ .Permalink }}" class="move">{{ .Title }}</a>
+      </li>
+
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ printf "<!-- W END recent_articles -->"  | safeHTML }}

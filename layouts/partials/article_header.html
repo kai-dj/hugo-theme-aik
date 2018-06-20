@@ -1,0 +1,31 @@
+{{ printf "<!--P  START article_header-->"  | safeHTML }}
+<div class="article-header">
+  
+  <h1 class="article-title" itemprop="name">
+    <a href="{{ .Permalink }}" class="permalink">{{ .Title }}</a>
+  </h1>
+  
+  <div class="article-meta">
+    <i class="fa fa-circle" aria-hidden="true"></i>
+    {{ $baseurl := .Site.BaseURL }}
+    {{range $categorie := .Params.categories}}
+    <a href="{{ $baseurl }}categories/{{ lower $categorie }}">
+      <!-- <strong>/</strong>-->{{ $categorie }} 
+    </a>
+    {{ end }}&nbsp;	
+
+    <i class="fa fa-chevron-right"></i>
+
+    {{range $tag := .Params.tags}}
+    <a href="{{ $baseurl }}tags/{{ lower $tag }}">
+      {{ $tag }}
+    </a>
+    {{ end }}
+
+    <time datetime="{{ .Date }}">
+      {{ .Date.Format .Site.Params.date_format }}
+    </time>
+    
+  </div>
+</div>
+{{ printf "<!--P END article_header  -->"  | safeHTML }}

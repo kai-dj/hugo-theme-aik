@@ -1,0 +1,29 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<div class="content">
+  <main id="main">
+    <div style="text-align: center;">
+      <h1>
+        {{with .Site.Data.general.page_not_found.title}}{{.}}{{end}}
+      </h1>
+      
+      <h3>
+        {{with .Site.Data.general.page_not_found.subtitle}}{{.}}{{end}}
+      </h3>
+      <p>
+        {{with .Site.Data.general.page_not_found.infotext1}}{{ . | markdownify}}{{ end }}
+      </p>
+      </br>
+      <p>
+        {{with .Site.Data.general.page_not_found.infotext2}}{{ . | markdownify}}{{ end }}
+      </p>
+      
+      
+      
+  </main>
+  {{ partial "aside" . }}
+  </div>
+</div>
+{{ partial "footer" . }}
+{{ partial "end_body_end_html" . }}

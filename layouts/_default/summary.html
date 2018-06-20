@@ -1,0 +1,9 @@
+{{ printf "<!-- D START summary -->"  | safeHTML }}
+<article class="article post">
+  {{ partial "article_header" . }}
+
+  <div class="archive post">
+    <!-- <time datetime="{{ .Date }}">{{ .Date.Format .Site.Params.date_format }}</time> -->
+  </div>
+</article>
+{{ printf "<!-- D END summary -->"  | safeHTML }}

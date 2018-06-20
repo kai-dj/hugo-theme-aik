@@ -1,0 +1,10 @@
+{{ printf "<!-- Static START index -->"  | safeHTML }}
+{{ partial "head" . }}
+{{ partial "header" . }}
+<div class="content">
+{{ partial "article_list" . }}
+{{ partial "aside" . }}
+</div>
+{{ partial "footer" . }}
+{{ partial "end_body_end_html" . }}
+{{ printf "<!-- Static END index -->"  | safeHTML }}

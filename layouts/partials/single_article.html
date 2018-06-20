@@ -1,0 +1,12 @@
+{{ printf "<!-- P START single_article -->"  | safeHTML }}
+<main id="main">
+  <article class="article post">
+    
+      {{ partial "article_header" . }}
+      {{ partial "article_content" . }}
+      
+    
+  </article>
+
+</main>
+{{ printf "<!-- P END single_article -->"  | safeHTML }}

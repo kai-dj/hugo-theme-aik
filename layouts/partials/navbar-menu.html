@@ -1,0 +1,45 @@
+{{ printf "<!-- P START navbar-menu -->"  | safeHTML }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/partials/navbar-menu.css">
+<div id="navbar-menu">
+  <nav id="main-nav">
+    <ul>
+      <li>
+        <a href="{{ .Site.BaseURL }}">
+          / <i class="fa fa-home"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a href="{{ .Site.BaseURL }}pic">
+          /pic <i class="fa fa-file-image-o"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a href="{{ .Site.BaseURL }}aud">
+          /aud <i class="fa fa-file-audio-o"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a href="{{ .Site.BaseURL }}txt">
+          /txt <i class="fa fa-file-text-o"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a href="{{ .Site.BaseURL }}src">
+          /src <i class="fa fa-file-code-o"></i>
+        </a>
+      </li>
+      <li>
+        <a href="{{ .Site.BaseURL }}about">
+          /nfo <i class="fa fa-info-circle"></i>
+          
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+{{ printf "<!-- P END navbar-menu -->"  | safeHTML }}
+

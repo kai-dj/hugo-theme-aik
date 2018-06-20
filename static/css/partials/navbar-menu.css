@@ -1,0 +1,58 @@
+#aik-nav {
+    margin: 0 auto;
+}
+
+#main-nav {
+
+}
+
+#main-nav ul {
+
+}
+
+#main-nav ul li {
+
+}
+
+#main-nav a {
+  
+}
+
+#main-nav a:hover {
+ 
+}
+
+/* Hide Dropdowns by Default */
+#main-nav ul ul {
+    float:right;
+}
+#main-nav ul ul {
+    position: absolute;
+    /* display: none; */
+    padding-top: 20px;
+    list-style:none;
+}
+
+/* Display Dropdowns on Hover */
+#main-nav ul li:hover > ul {
+    /* display:inherit; */
+}
+
+/* Fisrt Tier Dropdown */
+#main-nav ul ul {
+    /* float:right; */
+    
+}
+
+/* Second, Third and more Tiers	*/
+#main-nav ul ul ul li {
+}
+/* Change this in order to change the Dropdown symbol */
+/* li > a:after { content:  ' +'; } */
+/* li > a:only-child:after { content: ''; } */
+
+input[type=checkbox]:checked ul {
+    display: none;
+    position: absolute;
+}
+

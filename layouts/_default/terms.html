@@ -1,0 +1,44 @@
+{{ printf "<!-- D START terms -->"  | safeHTML }}
+{{ partial "head" . }}
+{{ partial "header" . }}
+<div class="content">
+  <main id="main">
+    <!-- {{ lower .Title }} -->
+    <!-- <ul class="category-list" style="list-style:none"> -->
+ <h1 class="archive-category">
+ <a href="{{ .Site.BaseURL }}">
+          / <i class="fa fa-home"></i>
+        </a>
+      </h1>
+      {{ $data := .Data }}
+      {{ range $key, $value := .Data.Terms.ByCount }}
+      <h1 class="archive-category">
+        <!-- <li class="category-list-item"> -->
+          <a class="category-list-link" href="{{ $value.Name | urlize }}">/{{ $value.Name }}
+            {{ with (eq (lower $value.Name) "pic") }}
+            <i class="fa fa-file-image-o"></i>
+            {{ end }}
+            {{ with (eq (lower $value.Name) "aud") }}
+            <i class="fa fa-file-audio-o"></i>
+            {{ end }}
+            {{ with (eq (lower $value.Name) "txt") }}
+            <i class="fa fa-file-text-o"></i>
+            {{ end }}
+            {{ with (eq (lower $value.Name) "src") }}
+            <i class="fa fa-file-code-o"></i>
+            {{ end }}
+            {{ with (eq (lower $value.Name) "nfo") }}
+            <i class="fa fa-info-circle"></i>
+            {{ end }}
+          </a>
+          <span class="category-list-count">({{ $value.Count }})</span>
+        <!-- </li> -->
+      </h1>
+      {{ end }}
+      <!-- </ul> -->
+  </main>
+  {{ partial "aside" . }}
+</div>
+{{ partial "footer" . }}
+{{ partial "end_body_end_html" . }}
+{{ printf "<!-- D END terms -->"  | safeHTML }}

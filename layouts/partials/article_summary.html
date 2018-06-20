@@ -1,0 +1,20 @@
+{{ printf "<!-- P START article_summary -->"  | safeHTML }}
+<div class="article-summary" itemprop="articleBody">
+  <div class="summary-container">
+    {{ if and (isset .Params "preview") (not (eq .Params.preview "")) }}
+    <div class="post-thumb">
+      <a href="{{ .Permalink }}"> <img src="{{ .Permalink }}{{.Params.preview}}" /></a>
+    </div>
+
+    <div class="post-content min-height200">{{ .Summary | safeHTML | truncate 700 ( " (&hellip;)" | safeHTML) }}</div>
+    {{ else }}
+    <div class="post-content">{{ .Summary | safeHTML | truncate 700 ( " (&hellip;)" | safeHTML) }} </div>
+
+    {{ end }}
+  </div>
+  <p class="article-more-link">
+    <a href="{{ .Permalink }}">Read more</a>
+  </p>
+</div>
+
+{{ printf "<!--P  END article_summary -->"  | safeHTML }}

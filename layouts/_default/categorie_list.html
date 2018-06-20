@@ -1,0 +1,14 @@
+{{ printf "<!-- D START categorie_list -->"  | safeHTML }}
+<main id="main">
+<!-- {{ partial "rss_icon" . }} -->
+{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+{{ range $paginator.Pages }}
+{{ if and (isset .Params "title") (not (eq .Params.title "")) }}
+<article class="article post">
+  {{ partial "article_header" . }}
+  {{ partial "article_summary" . }}
+</article>
+{{ end }}
+{{ end }} 
+</main>
+{{ printf "<!-- D END categorie_list -->"  | safeHTML }}

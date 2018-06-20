@@ -1,0 +1,7 @@
+{{ printf "<!-- P START article_content -->"  | safeHTML }}
+<div class="article-summary article-content">
+  <p class="summary">
+    {{ .Content }}
+  </p>
+</div>
+{{ printf "<!--P  END article_content -->"  | safeHTML }}

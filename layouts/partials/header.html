@@ -1,0 +1,8 @@
+{{ printf "<!-- P START header -->"  | safeHTML }}
+<header id="header">
+  <div id="header-main">
+  {{ partial "title" . }}
+  {{ partial "navbar-menu" . }}
+  </div>
+</header>
+{{ printf "<!-- P END header -->"  | safeHTML }}

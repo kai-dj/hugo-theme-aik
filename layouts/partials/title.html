@@ -1,0 +1,12 @@
+{{ printf "<!-- P START title -->"  | safeHTML }}
+<div id="title-container" class="title">
+  <a href="{{ .Site.BaseURL }}">
+    <img id="kai-logo" alt="logo" src="{{ .Site.BaseURL }}logo.svg">
+  </a>
+    <a id="navbar-brand" href="{{ .Site.BaseURL }}">
+      <span class="site-title-kai">kai</span>
+      <span class="site-title-dot-dj">.dj</span>
+    </a>
+
+</div>
+{{ printf "<!-- P END title -->"  | safeHTML }}

@@ -1,0 +1,11 @@
+{{ printf "<!-- P START aside -->"  | safeHTML }}
+<aside id="aside">
+<div class="inner-aside">
+  {{ partial "widgets/recent_articles" . }}
+  <!-- {{ partial "widgets/categories" . }} -->
+
+  {{ partial "widgets/tag_cloud" . }}
+</div>
+</aside>
+{{ printf "<!-- P END aside -->"  | safeHTML }}
+

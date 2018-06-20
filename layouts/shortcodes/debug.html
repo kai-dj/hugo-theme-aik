@@ -1,0 +1,20 @@
+{{ printf "<!-- SC START jsfiddle -->"  | safeHTML }}
+<strong>year </strong>{{ now.Format "2006" }}</br></br>
+ <strong>. -Scope </strong>{{ printf "%#v" . }}</br></br>
+ <strong>.Page-Scope  </strong>{{ printf "%#v" .Page }}</br></br>
+
+
+ <strong>$.Site-Scope  </strong>{{ printf "%#v" $.Site }}</br></br>
+
+ </br></br>
+  <strong>
+ .Data.Pages </br></br>
+       </strong>
+{{ range .Site.Pages }}
+     <strong>
+       {{ . }}
+       </strong>
+    {{ printf "%#v" . }}</br></br>
+{{ end }}
+ 
+{{ printf "<!-- SC END jsfiddle -->"  | safeHTML }}

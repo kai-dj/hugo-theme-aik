@@ -1,0 +1,7 @@
+{{ printf "<!-- SC START jsfiddle -->"  | safeHTML }}
+<iframe
+  style="width: 100%; height: auto;" frameBorder="0" allowfullscreen="allowfullscreen"
+  src="https://jsfiddle.net/{{.Get "id"}}/embedded/{{ if not (eq (.Get "tabs") "") }}{{ .Get "tabs" }}/{{ end }}">
+</iframe>
+<br><br>
+{{ printf "<!-- SC END jsfiddle -->"  | safeHTML }}
